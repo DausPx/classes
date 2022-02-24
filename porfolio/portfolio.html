@@ -1,7 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      #navigation {
+        background-color: gray;
+      }
+
+      #navigation ul li,
+      #navigation ul {
+        display: inline-block;
+      }
+
+      #navigation ul li {
+        padding-right: 20px;
+      }
+
+      #logo {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      #logoContainer {
+        width: auto;
+        height: 100%;
+        display: inline-block;
+        margin-left: 20px;
+      }
+
+      #navigation a {
+        text-decoration: none;
+        color: blue;
+        font-size: 24px;
+      }
+
+      #navigation a:hover {
+        cursor: pointer;
+        color: yellow;
+      }
+    </style>
+  </head>
   <body>
-    <nav>
+    <nav id="navigation">
+      <div id="logoContainer">
+        <img
+          src="https://cdn.dribbble.com/users/2973/screenshots/16757947/media/c56c56d24f8c591ff753faa15ea4a033.png?compress=1&resize=400x300&vertical=top"
+          alt="Logo"
+          id="logo"
+        />
+      </div>
+
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about-me">About me</a></li>
