@@ -1,0 +1,42 @@
+#container {
+  height: 600px;
+}
+
+#text {
+  margin-top: 300px;
+  display: inline-block;
+  width: 45%;
+}
+
+#btn {
+  margin-top: 300px;
+  display: inline-block;
+  width: 50%;
+  position: relative;
+}
+
+#btn > button {
+  margin-left: 45%;
+}
+
+@media screen and (max-width: 600px) {
+  #container {
+    height: fit-content;
+  }
+  #text {
+    margin-top: 0;
+    padding-top: 100px;
+    display: block;
+    width: auto;
+  }
+  #btn {
+    margin-top: 20px;
+
+    display: block;
+    width: auto;
+  }
+
+  #btn > button {
+    margin-left: 0;
+  }
+}
