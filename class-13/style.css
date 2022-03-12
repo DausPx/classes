@@ -10,7 +10,7 @@
 
 .children {
   width: 50%;
-  /* margin: 20px; */
+  margin: 20px;
   height: 100px;
   background-color: blueviolet;
 }
