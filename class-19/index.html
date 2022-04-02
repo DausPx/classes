@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .yellow {
+        color: "yellow";
+      }
+    </style>
+  </head>
+  <body>
+    <input title="Input 1" on />
+    <p id="test" class="test2" onclick="clickMe()">This is random text</p>
+
+    <script>
+      function clickMe(params) {
+        var element = document.querySelector("#test");
+        // var text = document.createTextNode("this is text");
+        // var child = document.createElement("p");
+        // child.textContent = "this is text";
+        element.style.color = "yellow";
+        element.classList.add("yellow");
+
+        // element.appendChild(child);
+
+        console.log(element);
+      }
+    </script>
+  </body>
+</html>
