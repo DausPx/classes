@@ -15,13 +15,14 @@
   <body>
     <input title="Input 1" on />
     <p id="test" class="test2" onclick="clickMe()">This is random text</p>
+    <div id="addme"></div>
 
     <script>
       function clickMe(params) {
         var element = document.querySelector("#test");
-        // var text = document.createTextNode("this is text");
-        // var child = document.createElement("p");
-        // child.textContent = "this is text";
+        var text = document.createTextNode("this is text");
+        var child = document.createElement("p");
+        child.textContent = "this is text";
         element.style.color = "yellow";
         element.classList.add("yellow");
 
