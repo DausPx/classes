@@ -13,22 +13,25 @@
     </style>
   </head>
   <body>
-    <input title="Input 1" on />
-    <p id="test" class="test2" onclick="clickMe()">This is random text</p>
-    <div id="addme"></div>
+    <button onclick="counter()" id="click">Click me</button>
+    <p id="count">0</p>
 
     <script>
-      function clickMe(params) {
-        var element = document.querySelector("#test");
-        var text = document.createTextNode("this is text");
-        var child = document.createElement("p");
-        child.textContent = "this is text";
-        element.style.color = "yellow";
-        element.classList.add("yellow");
+      function addParagraph(params) {
+        var div = document.getElementById("addme");
 
-        // element.appendChild(child);
+        var paragraph = document.createElement("p");
+        paragraph.textContent = "I am created on click";
 
-        console.log(element);
+        div.appendChild(paragraph);
+      }
+
+      var count = 0;
+      function counter() {
+        var p = document.getElementById("count");
+        count = count + 1;
+
+        p.textContent = count;
       }
     </script>
   </body>
