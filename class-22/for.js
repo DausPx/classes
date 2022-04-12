@@ -63,13 +63,14 @@ var array1 = ["a", "b", "c", "d"];
 var array2 = ["a", "b", "f"];
 
 var common = [];
+var uncommon = [];
 
 for (let index1 = 0; index1 < array1.length; index1++) {
   for (let index2 = 0; index2 < array2.length; index2++) {
-    if (array1[index1] !== array2[index2]) {
+    if (array1[index1] === array2[index2]) {
       common.push(array1[index1]);
     }
   }
 }
 
-console.log(common);
+console.log(uncommon);
