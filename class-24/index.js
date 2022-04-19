@@ -1,7 +1,6 @@
 // function sum(a, b) {
 //   return a + b;
 // }
-
 // console.log(sum(2, 5));
 
 // function concatArrays(array1, array2) {
@@ -67,14 +66,65 @@
 
 // console.log(getHexColor("red"));
 
-var test = 10;
+// function a() {
 
-function a() {
-  test = 20;
+//   test = 20;
+// }
+
+// a();
+
+// console.log(test);
+// var test = 10;
+// console.log(test)
+// 'address'
+
+// var a = { name: undefined, surname: "Ugljanin" };
+// var aKeys = Object.keys(a);
+// var aValues = Object.values(a);
+
+// console.log(aKeys.includes("name"));
+
+// if (a["name"] !== undefined) {
+//   console.log("A objekat ima property address");
+// }
+
+// var objekat = {
+//   name: "Irfan",
+//   surname: "Ugljanin",
+//   address: {
+//     street: "Osmana Dervisurevica",
+//     number: 20,
+//     city: "Novi Pazar",
+//   },
+//   friends: [{ name: "Suad" }, { name: "Daris" }],
+// };
+
+// objekat.fullName = `${objekat.name} ${objekat.surname}`;
+
+// console.log(objekat);
+
+var nizKorisnika = [
+  { name: "irfan", id: "123" },
+  { name: "suad", id: "321" },
+  { name: "nikola", id: "222" },
+];
+
+// for (let i = 0; i < nizKorisnika.length; i++) {
+//   const korisnik = nizKorisnika[i];
+
+//   if (korisnik.name === "suad") {
+//     console.log(korisnik);
+//   }
+// }
+
+function findObject(niz, parametar, vrednostParametra) {
+  for (let i = 0; i < niz.length; i++) {
+    const objekat = niz[i];
+
+    if (objekat[parametar] === vrednostParametra) {
+      return objekat;
+    }
+  }
 }
 
-
-
-a();
-
-console.log(test);
+console.log(findObject(nizKorisnika, "id", "123"));
