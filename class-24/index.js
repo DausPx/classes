@@ -73,6 +73,7 @@ function a() {
   test = 20;
 }
 
+
 a();
 
 console.log(test);
