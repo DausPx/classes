@@ -64,5 +64,5 @@
 //   return string;
 // }
 
-// test
+// test2
 // console.log(range(2, 5));
