@@ -1,5 +1,5 @@
 function sum(a, b) {
   return a + b;
 }
-
-export { sum };
+const a = 10;
+export { sum, a };
