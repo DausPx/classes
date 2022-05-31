@@ -14,6 +14,7 @@ const getQuotes = async (page = 1) => {
 
 let page = 1;
 const contentDiv = document.getElementById("content");
+const pageInput = document.getElementById("page");
 
 // const createCard = (author, quote) => {
 //   return `<div
@@ -63,9 +64,23 @@ const createCardNode = (author, quote) => {
   return div;
 };
 
-getQuotes().then((result) => {
-  result.forEach((quote) => {
-    const newCard = createCardNode(quote.author, quote.content);
-    contentDiv.appendChild(newCard);
+// getQuotes().then((result) => {
+//   result.forEach((quote) => {
+//     const newCard = createCardNode(quote.author, quote.content);
+//     contentDiv.appendChild(newCard);
+//   });
+// });
+
+const clickable = () => {
+  getQuotes(pageInput.value).then((result) => {
+    contentDiv.innerHTML = "";
+    result.forEach((quote) => {
+      const newCard = createCardNode(quote.author, quote.content);
+      contentDiv.appendChild(newCard);
+    });
   });
-});
+};
+
+const button = document.getElementById("click");
+
+button.addEventListener("click", clickable);
