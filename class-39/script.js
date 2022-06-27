@@ -1,10 +1,10 @@
 const getQuotes = async () => {
   try {
-    const response = await fetch(`https://api.imgflip.com/get_memes`);
+    const response = await fetch(`https://catfact.ninja/breeds`);
 
     const result = await response.json();
 
-    return result.data.memes;
+    return result.data;
   } catch (error) {
     console.log(error);
   }
@@ -14,15 +14,17 @@ const contentDiv = document.getElementById("content");
 // const pageInput = document.getElementById("page");
 
 const createCard = (data) => {
-  return `<div style="border: 1px solid black; margin: 10px; width: 500px">
-  <p style="text-align: center">${data.name}</p>
-  <img src="${data.url}" alt="" width="100%" />
+  return `<div style="border: 1px solid black; margin: 10px; width: 400px; display:flex; flex-wrap: wrap">
+  <p style="width:50%; text-align: center">Breed: ${data.breed}</p>
+  <p style="width:50%; text-align: center">Country: ${data.country}</p>
+  <p style="width:50%; text-align: center">Origin: ${data.origin}</p>
+  <p style="width:50%; text-align: center">Coat: ${data.coat}</p>
+  <p style="width:50%; text-align: center">Pattern: ${data.pattern}</p>
 </div>`;
 };
 
 getQuotes().then((result) => {
   result.forEach((data) => {
-    console.log(contentDiv.innerHTML);
     contentDiv.innerHTML = contentDiv.innerHTML + createCard(data);
   });
 });
